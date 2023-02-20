@@ -131,6 +131,13 @@ LOGOUT_REDIRECT_URL = 'home'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = "smtp.mailgun.org"
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "postmaster@sandboxbeedae9fb65c45b8b249ed6184bd9afa.mailgun.org"
+EMAIL_HOST_PASSWORD = "6e3bc13d1c899ca7aa6f8bd35b038b8f-52d193a0-2847f8d9"
+EMAIL_USE_TLS = True
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
