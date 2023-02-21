@@ -1,8 +1,26 @@
-{% extands 'base.html'%} {%block title%} Article {%endblock%} {%block content%} {% for i in Article%}
-<h2>
-    {{i.title}}
-</h2>
-<p class="text-info">{{i.gate}}</p>
-<p class="text-danger">{{i.body}}</p>
-
-{%endblock%}
+{% extends 'base.html'%} {%block title%} Articles {%endblock%} {%block content%} {% for i in object_list%}
+<div class="card mb-3">
+    <div class="card_header">
+        <span class="font-weight-bold">
+        <h2>
+            <a href="{%url 'article_detail' i.pk%}" class="text-justify">
+                {{i.title}}
+            </a>
+        </h2>
+       </span>
+        <span class="text-muted">
+        <h4>
+            {{i.author}}, tomondan yozilgan | {{i.date}}
+        </h4>
+       </span>
+    </div>
+    <div class="card-body">
+        <p>
+            {{i.body}}
+        </p>
+    </div>
+    <div class="card-footer text-center text-muted">
+        <a href="{%url 'article_update' i.pk%}" class="btn btn-success">Update</a> <a href="{%url 'article_delete' i.pk%}" class="btn btn-danger">Delete</a>
+    </div>
+</div>
+{%endfor%} {%endblock%}
