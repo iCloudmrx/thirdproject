@@ -25,8 +25,8 @@ urlpatterns = [
     # ex: localhost/users
     path('users/', include('django.contrib.auth.urls')),
     # ex: localhost/pages
-    path('', include('pages.urls')),
+    path('pages/', include('pages.urls')),
     # ex: localhost/articles
-    path('articles/', include('articles.urls')),
+    path('', include('articles.urls')),
 
 ]
