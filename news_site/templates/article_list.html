@@ -1,0 +1,8 @@
+{% extands 'base.html'%} {%block title%} Article {%endblock%} {%block content%} {% for i in Article%}
+<h2>
+    {{i.title}}
+</h2>
+<p class="text-info">{{i.gate}}</p>
+<p class="text-danger">{{i.body}}</p>
+
+{%endblock%}
