@@ -1,6 +1,8 @@
 {%extends 'base.html'%} {%load crispy_forms_tags%} {%block title%} Article Edit {%endblock%} {%block content%}
 <h1 class="text-info">{{object.title}}</h1>
 <h5 class="card-muted">{{object.author}} tomondan yozilgan {{object.date}}</h5>
+{%if object.image%}
+<img src="{{object.images.url }}" alt="{{object.title}}" width="400" height="400"> {%endif%}
 <p class="text-info">{{object.body}}</p>
 <a href="{% url 'article_update' article.pk%}" class="btn btn-dark">Update</a>
 <a href="{% url 'article_delete' article.pk%}" class="btn btn-danger">Delete</a>

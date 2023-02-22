@@ -138,6 +138,9 @@ EMAIL_HOST_USER = "postmaster@sandboxbeedae9fb65c45b8b249ed6184bd9afa.mailgun.or
 EMAIL_HOST_PASSWORD = "6e3bc13d1c899ca7aa6f8bd35b038b8f-52d193a0-2847f8d9"
 EMAIL_USE_TLS = True
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
